@@ -2,8 +2,8 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    MONGO_URI: str
-    REDIS_URI: str
+    REDIS_HOST: str
+    REDIS_PORT: int
     ACCESS_TOKEN_LIFETIME: int
     REFRESH_TOKEN_LIFETIME: int
     SECRET_KEY: str
