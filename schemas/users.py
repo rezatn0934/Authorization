@@ -2,6 +2,7 @@ from pydantic import BaseModel, EmailStr
 
 
 class UserBase(BaseModel):
+    is_registered: bool = False
     email: EmailStr
 
 
@@ -14,5 +15,7 @@ class UserLogin(UserBase):
     password: str
 
 
-class User(UserBase):
+class UserInfo(UserBase):
     id: int
+    fullname: str
+
